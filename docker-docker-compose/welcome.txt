@@ -1,0 +1,1 @@
+Enter stuff into welcome.txt to display on terminal
