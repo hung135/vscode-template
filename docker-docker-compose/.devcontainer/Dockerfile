@@ -28,7 +28,7 @@ RUN apt-get update \
     && apt-get -y install git iproute2 procps \
     #
     # Install Docker CE CLI
-    && apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common lsb-release \
+    && apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common lsb-release locales \
     && curl -fsSL https://download.docker.com/linux/$(lsb_release -is | tr '[:upper:]' '[:lower:]')/gpg | (OUT=$(apt-key add - 2>&1) || echo $OUT) \
     && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/$(lsb_release -is | tr '[:upper:]' '[:lower:]') $(lsb_release -cs) stable" \
     && apt-get update \
@@ -60,8 +60,8 @@ ENV LC_ALL en_US.UTF-8
 # Uncomment the following COPY line and the corresponding lines in the `RUN` command if you wish to
 # include your requirements in the image itself. It is suggested that you only do this if your
 # requirements rarely (if ever) change.
-COPY scripts/requirements.txt /tmp/pip-tmp/
-RUN pip --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
-    && rm -rf /tmp/pip-tmp \
-# Switch back to dialog for any ad-hoc use of apt-get
-ENV DEBIAN_FRONTEND=dialog
+# COPY scripts/requirements.txt /tmp/pip-tmp/
+# RUN pip --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
+#     && rm -rf /tmp/pip-tmp \
+# # Switch back to dialog for any ad-hoc use of apt-get
+# ENV DEBIAN_FRONTEND=dialog
