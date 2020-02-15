@@ -1,1 +1,33 @@
-Enter stuff into welcome.txt to display on terminal
+
+ To change Info below, Edit:
+    .devcontainer/welcome.txt 
+    .devcontainer/.bashrc 
+  
+  Run alias:
+ 
+    
+
+  
+    
+VSCODE environment Alias:
+    buildbase -- build the docker image to save time RUN THIS ONCE FIRST to save time later
+    buildserver -- if you need a centos server with systemd to test
+    mocktest -- will run Make test 
+    buildexe -- compile runtime executable for switchboard and put into tar file
+    cleanbase -- removes the buildbase image so the next time buildexe run it recreates
+    rebuildall - drop all containers AND will DISCONNECT you from VSCODE inorder to rebuild
+    
+Github-Manager:
+    Uploading:
+        You need a github token which can be generated from github.com/settings/tokens and generate one
+        To upload:
+            python github-manager.py -e https://github.com -k <token> -r "<repo/path>" -c "<Title>" -m "<message_for_release>" -a <path-to-asset>
+        To update a release:
+            python github-manager.py -e -k <token> -r <repo> -u -t <tag_id> -a <path-to-asset>
+    Downloading:
+            python github-manager.py -e -r <repo> -dl <tag> -o <output_dir> 
+ 
+ Fish is your friend!!!"
+    TYPE fish 
+
+    

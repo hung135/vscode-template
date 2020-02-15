@@ -19,3 +19,15 @@ cat /workspace/.devcontainer/welcome.txt
 export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 export PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \[\033[0;36m\]\h \w\[\033[0;32m\]$(__git_ps1)->:$(git remote 2>/dev/null | tr "'"\n"'" "'" "'")\n\[\033[0;32m\]└─\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\] >\[\033[0m\]'
 source /workspace/.devcontainer/git-prompt.sh
+ 
+
+
+#VSCODE Makefile alias:
+alias buildbase='make -f /workspace/.devcontainer/Makefile buildbase'
+alias buildbaseserver='make -f /workspace/.devcontainer/Makefile buildbaseserver'
+alias mocktest='make -f /workspace/.devcontainer/Makefile test'
+alias buildexe='make -f /workspace/.devcontainer/Makefile executable'
+alias cleanbase='docker image rm buildbase:latest'
+alias cleantest='make -f /workspace/Makefile cleantest'
+alias githubmanager = 'python /workspace/.devcontainer/github-manager.py'
+alias rebuildall="make -f /workspace/.devcontainer/Makefile rebuildall" 
