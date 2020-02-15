@@ -29,5 +29,5 @@ alias mocktest='make -f /workspace/.devcontainer/Makefile test'
 alias buildexe='make -f /workspace/.devcontainer/Makefile executable'
 alias cleanbase='docker image rm buildbase:latest'
 alias cleantest='make -f /workspace/Makefile cleantest'
-alias githubmanager = 'python /workspace/.devcontainer/github-manager.py'
+alias githubmanager='python /workspace/.devcontainer/github-manager.py'
 alias rebuildall="make -f /workspace/.devcontainer/Makefile rebuildall" 
