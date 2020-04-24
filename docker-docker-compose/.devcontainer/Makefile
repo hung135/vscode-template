@@ -17,7 +17,7 @@ executable: buildbase
 
 container:
 	@echo ${this_container}
-rebuild:
+rebuildall:
 	docker rm -f $(devcontainers) $(this_container)
 removealldocker:
 	docker rm -f $(devcontainers)
@@ -29,3 +29,5 @@ genversion:
 	date >>/workspace/scripts/version.py
 	echo "\"\"\"">>/workspace/scripts/version.py
 	echo "}">>/workspace/scripts/version.py
+cleanbase:
+	docker image rm $(IMGNAME) -f
