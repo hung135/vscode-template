@@ -31,3 +31,5 @@ alias cleanbase='docker image rm buildbase:latest'
 alias cleantest='make -f /workspace/Makefile cleantest'
 alias githubmanager='python /workspace/.devcontainer/github-manager.py'
 alias rebuildall="make -f /workspace/.devcontainer/Makefile rebuildall" 
+alias fakemesomeyaml='fake_me_some --y /workspace/tests/connection.yaml --of /workspace/tests/fake_me_some.yaml && cat /workspace/tests/fake_me_some.yaml'
+alias fakemesomecsv='fake_me_some --y /workspace/tests/fake_me_some.yaml --o CSV --d /workspace/tests/sample_data/'

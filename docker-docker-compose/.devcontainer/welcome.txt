@@ -30,4 +30,5 @@ Github-Manager:
  Fish is your friend!!!"
     TYPE fish 
 
-    
+Fake Me Some Data:
+	fakemesomeyaml && fakemesomecsv

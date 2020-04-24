@@ -6,3 +6,5 @@ pygithub
 pylint
 pytest
 pytest-cov
+fake-me-some
+pyscaffold
